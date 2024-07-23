@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.7.0.js"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+    <link href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css" rel="stylesheet">
+
+    
+    <style>
+        .image-container {
+            position: relative;
+            width: 100%; 
+            height: 500px;
+        }
+        
+        .background-container {
+            position: relative;
+            width: 100%;
+            height: auto;
+            background-image: url('img/background-yellow.png');
+        }
+        
+        #red-background {
+            background-image: url('img/red-background.png');
+            height: auto;
+            z-index: -1;
+        }
+        
+        #red-background-2 {
+            background-image: url('img/red-background-2.png');
+            height: auto;
+            z-index: -1;
+        }
+        
+        .zoom {
+            position: relative;
+            overflow: hidden;
+            border-radius: 20px;
+        }
+        
+        .zoom > img {
+            transition: transform 0.3s ease;
+        }
+        
+        .zoom:hover > img {
+            transform: scale(1.1);
+        }
+        
+        .container {
+            padding-left: 10%px;
+            padding-right: 10%px;
+        }
+        
+        #black-background {
+            background-color: black;
+        }
+        
+        #scroll-animation {
+            z-index: 100000000; 
+            position: fixed; 
+            width: 100%;
+            font-size: medium;
+        }
+        </style>
+</head>
+
+<body>
+    <div>
+        <nav class="navbar navbar-expand-lg bg-body-tertiary" id="scroll-animation">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#" style="margin-left: 5%; margin-right: 2%;">
+                    <img src="img/logo.png" alt="images" class="w-100">
+                </a>
+
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <div class="nav-item mx-2">
+                        <a class="nav-link" href="#" style="color: #6C6CF6;">About Us</a>
+                    </div>
+                    <div class="nav-item mx-2">
+                        <a class="nav-link" href="#" style="color: #6C6CF6;">Programs</a>
+                    </div>
+                    <div class="nav-item mx-2">
+                        <a class="nav-link" href="#" style="color: #6C6CF6;">Contact Us</a>
+                    </div>
+                </ul> 
+
+            </div>
+        </nav>
+    
+        <div class="background-container position-relative" style="padding-top: 10%;">
+            <div class="row justify-content-center">
+                <div class="col-4">
+                    <img src="img/eduall-logo.png" alt="" class="w-100" style="position: relative;">
+                </div>
+            </div>
+            <div class="row justify-content-center">
+                <div class="col-6">
+                    <img src="img/kids-image-1.png" alt="" class="w-100" style="position: relative; z-index: 2;">
+                </div>
+            </div>
+            <div class="position-absolute" style="bottom: 0;">
+                <img src="img/blue-line.png" alt="" class="w-100" style="z-index: 1;">
+            </div>
+            
+        </div>
+
+    </div>
+
+    <div class="container-fluid" style="z-index: 3; position: relative; margin-top: -2%;" id="red-background">
+        <div class="container pt-5">
+            <div class="row align-items-center row-cols-md-2 row-cols-1 mb-5" style="color: white;">
+                <div class="col" style="text-align: center; font-weight: bold;">
+                    <p> What is EduALL Junior </p>
+                </div>
+                <div class="col">
+                    <p> EduALL Junior is a cutting-edge learning center for kids aged 5 to 12. Our comprehensive programs are designed to provide an enjoyable and interactive way for kids to explore a range of interests and acquire future skills. Every kid is unique; therefore, we personalized exploratory learning to nurture their competencies development. </p>
+                    
+                    <p> Are you looking for productive activities to avoid excessive screen time for your kids? Our research-informed and expert-approved programs involve hands-on and collaborative learning experiences to foster kids’ productivity and positive use of technology. With the support of our highly trained educators and psychologists team, we closely monitor the learning progress to ensure each child receives the support they need to thrive. Through our focus on personal and interpersonal growth, EduALL Junior offers a new learning experience for your child. </p>
+                </div>
+            </div>
+
+            <div class="row align-items-center">
+                <div class="col" style="text-align: center; color: white; font-weight: bold;">
+                    <p>WHY EduALL Junior?</p>
+                </div>
+            </div>
+            
+            <div class="row justify-content-center row-cols-md-4 row-cols-2 pb-4">
+                <div class="col">
+                    <div data-aos="fade-right" data-aos-easing="ease-out-cubic"
+                    data-aos-duration="2000">
+                        <img src="img/expert-developed.png" alt="" class="w-100">
+                    </div>
+                </div>
+                <div class="col">
+                    <div data-aos="fade-up" data-aos-easing="ease-out-cubic"
+                    data-aos-duration="2000">
+                        <img src="img/personalized.png" alt="" class="w-100">
+                    </div>
+                </div>
+                <div class="col">
+                    <div data-aos="fade-up" data-aos-easing="ease-out-cubic"
+                    data-aos-duration="2000">
+                        <img src="img/playful.png" alt="" class="w-100">
+                    </div>
+                </div>
+                <div class="col">
+                    <div data-aos="fade-left" data-aos-easing="ease-out-cubic"
+                    data-aos-duration="2000">
+                        <img src="img/holistic.png" alt="" class="w-100">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <div>
+        <div class="container" style="text-align: center;">
+            <div class="row row-cols-md-3 justify-content-center row-cols-1 mt-5">
+                <div class="col" style="margin-bottom: 3%;"> 
+                    <img src="img/core-programs.png" alt="" class="w-100">
+                </div>
+            </div>
+
+            <div class="row justify-content-center row-cols-md-3 row-cols-2 g-3">
+                <div class="col zoom">
+                    <img src="img/coding-robotics.png" alt="" class="w-100">
+                </div>
+                <div class="col zoom">
+                    <img src="img/science.png" alt="" class="w-100">
+                </div>
+                <div class="col zoom">
+                    <img src="img/visual-arts.png" alt="" class="w-100">
+                </div>
+                <div class="col zoom">
+                    <img src="img/creative-communications.png" alt="" class="w-100">
+                </div>
+                <div class="col zoom">
+                    <img src="img/entrepreneurship.png" alt=""class="w-100">
+                </div>
+            </div>
+
+            <div class="row row-cols-md-3 justify-content-center row-cols-1" style="margin-top: 5%;">
+                <div class="col" style="margin-bottom: 3%;"> 
+                    <img src="img/custom-programs.png" alt="" class="w-100">
+                </div>
+            </div>
+
+            <div class="row row-cols-md-3 justify-content-center">
+                <p>
+                    In addition to our regular class, we offer customized programs that are available by request. Please let us know if you seek a customized learning experience for individuals or groups. Our learning specialist will be delighted to discuss options that meet your needs.
+                </p>
+            </div>
+
+            <div class="row row-cols-md-5 row-cols-2 justify-content-center">
+                <div class="col m-0 p-0" data-aos="flip-left" data-aos-easing="ease-out-cubic"
+                data-aos-duration="2000">
+                    <img src="img/pop-up-class.png" alt="" class="w-100">
+                </div>
+                <div class="col m-0 p-0" data-aos="flip-left" data-aos-easing="ease-out-cubic"
+                data-aos-duration="2000">
+                    <img src="img/private-events.png" alt="" class="w-100">
+                </div>
+                <div class="col m-0 p-0" data-aos="flip-left" data-aos-easing="ease-out-cubic"
+                data-aos-duration="2000">
+                    <img src="img/social-learning.png" alt="" class="w-100">
+                </div>
+                <div class="col m-0 p-0" data-aos="flip-left" data-aos-easing="ease-out-cubic"
+                data-aos-duration="2000">
+                    <img src="img/field-trip.png" alt="" class="w-100">
+                </div>
+                <div class="col m-0 p-0" data-aos="flip-left" data-aos-easing="ease-out-cubic"
+     data-aos-duration="2000">
+                    <img src="img/school-holiday-program.png" alt="" class="w-100">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container-fluid" style="z-index: 3; position: relative;" id="red-background-2">
+        <div class="row row-cols-md-3 justify-content-center">
+            <div class="col mt-5 mb-5" style="text-align: center;">
+                <img src="img/facilities.png" alt="" class="w-50">
+            </div>
+        </div>
+        <div class="row row-cols-md-3 justify-content-center">
+            <div class="col mt-2 mb-5" style="text-align: center; color: white;">
+                <h3>EduALL Junior Space</h3>
+            </div>
+        </div>
+        <div class="row row-cols-md-4 row-cols-1 justify-content-center pb-5">
+            <div class="col">
+                <div class="zoom">
+                    <img src="img/art-studio.png" alt="" class="w-100">
+                </div>
+                <p style="text-align: center; color: white;" class="m-4">Art Studio</p>
+            </div>
+            <div class="col">
+                <div class="zoom">
+                    <img src="img/science-lab.png" alt="" class="w-100">
+                </div>
+                <p style="text-align: center; color: white;" class="m-4">Science Lab</p>
+            </div>
+            <div class="col">
+                <div class="zoom">
+                    <img src="img/fabrication-lab.png" alt="" class="w-100">
+                </div>
+                <p style="text-align: center; color: white;" class="m-4">Makerspace & Fabrication Lab</p>
+            </div>
+            <div class="col">
+                <div class="zoom">
+                    <img src="img/production-studio.png" alt="" class="w-100">
+                </div>
+                <p style="text-align: center; color: white;" class="m-4">Content Production Studio</p>
+            </div>
+            <div class="col">
+                <div class="zoom">
+                    <img src="img/co-working-space.png" alt="" class="w-100">
+                </div>
+                <p style="text-align: center; color: white;" class="m-4">Co-working Space</p>
+            </div>
+            <div class="col">
+                <div class="zoom">
+                    <img src="img/library.png" alt="" class="w-100">
+                </div>
+                <p style="text-align: center; color: white;" class="m-4">Library & Public Speaking Area</p>
+            </div>
+            <div class="col">
+                <div class="zoom">
+                    <img src="img/garden.png" alt="" class="w-100">
+                </div>
+                <p style="text-align: center; color: white;" class="m-4">Indoor Planting Garden</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="container-fluid">
+        <div class="row justify-content-center my-3" style="text-align: center;"> 
+            <img src="img/international-certifications.png" alt="" class="w-50">
+        </div>
+        <div class="container">
+            <div class="row row-cols-md-2 row-cols-1 justify-content-center">
+                <div class="col">
+                    <div class="container">
+                        <div style="text-align: center;">
+                            <img src="img/crest-awards.png" alt="" class="w-50">
+                            <div class="container w-60" style="text-align: left;">
+                                <p>British Science Association's scheme for STEM+ student-led projects.</p>
+                                <p>Recognized by UCAS, the leading UK university admissions organization</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="row row-cols-2">
+                        <div class="col">
+                            <img src="img/francisco-castro.png" alt="" class="w-100">
+                        </div>
+                        <div class="col">
+                            <img src="img/noora-noushad.png" alt="" class="w-100">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container-fluid background-container">
+        <div class="row justify-content-center my-3" style="text-align: center; margin-top: 10%;"> 
+            <img src="img/student-journey.png" alt="" class="w-50">
+        </div>
+        <div class="row justify-content-center mt-5" style="text-align: center;">
+            <div class="container-fixed">
+                <img src="img/goal.png" alt="" class="w-50">
+            </div>
+        </div>
+
+        <div class="row justify-content-center mt-5" style="text-align: center;">
+            <div class="container-fixed">
+                <img src="img/Rectangle-221.png" alt="" class="w-50" style="position: relative;">
+                <div class="centered" style="position: absolute; top: 85%; left: 51%; transform: translate(-50%, -50%); color: white;">spot untuk video</div>
+            </div>
+        </div>
+        
+    </div>
+
+    <div class="container">
+        <div class="row justify-content-center mt-5 mb-5" style="text-align: center;">
+            <div class="container-fixed">
+                <img src="img/upcoming-events.png" alt="" class="w-25">
+            </div>
+        </div>
+
+        <section class="splide" aria-label="Splide Basic HTML Example">
+            <div class="splide__track">
+                <ul class="splide__list">
+                    <div class="col rounded splide__slide">
+                        <div class="card rounded zoom">
+                            <img src="img/pop-up-1.png" alt="">
+                            <div class="card-body">
+                                <h3>Summer Pop Up:</h3>
+                                <h2>Cooking Science Wonderlab</h2>
+                                <p><i class="bi bi-clock-fill"></i> 15 June 2024</p>
+                                <p><i class="bi bi-geo-alt-fill"></i> AKR Tower, Jl. Panjang no. 5</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card rounded zoom splide__slide">
+                        <img src="img/pop-up-2.png" alt="">
+                        <div class="card-body">
+                            <h3>Summer Pop Up:</h3>
+                            <h2>Fun Painting Workshop</h2>
+                            <p><i class="bi bi-clock-fill"></i> 22 June 2024</p>
+                            <p><i class="bi bi-geo-alt-fill"></i> Aruku Coffee Studio</p>
+                        </div>
+                    </div>
+
+                    <div class="col rounded splide__slide">
+                        <div class="card rounded zoom">
+                            <img src="img/pop-up-3.png" alt="">
+                            <div class="card-body">
+                                <h3>Summer Pop Up:</h3>
+                                <h2>Summer Break Program</h2>
+                                <p><i class="bi bi-clock-fill"></i> 25-29 June 2024</p>
+                                <p><i class="bi bi-geo-alt-fill"></i> Ichtus School Puri Indah</p>
+                            </div>
+                        </div>
+                    </div>
+                </ul>
+            </div>
+        </section>
+    </div>
+
+    <div class="container-fluid p-0">
+        <img src="img/banner.png" alt="" class="w-100">
+    </div>
+
+    <div class="container">
+        <div class="container my-5" style="text-align: center;">
+            <div class="row justify-content-center">
+                <div class="col-md-7 col-12">
+                    <img src="img/form.png" alt="" class="w-100">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container-fluid" id="black-background">
+        <div class="container px-2 py-5">
+            <div class="row row-cols-md-3 row-cols-1">
+                <div class="col">
+                    <img src="img/logo-2.png" alt="">
+                </div>
+                <div class="col" style="color: white;">
+                    <p> 
+                        <i class="bi bi-envelope"></i> info@junior.edu-all.com 
+                    </p>
+                    <p> 
+                        <i class="bi bi-telephone"></i> +62 819 11645771 
+                    </p>
+                </div>
+                <div class="col" style="color: white;">
+                    <p>
+                        <i class="bi bi-instagram"></i> eduall.junior
+                    </p>
+                    <p>
+                        <i class="bi bi-facebook"></i> Edu-ALL Junior
+                    </p>
+                </div>
+            </div>
+
+            <hr style="color: white;">
+
+            <div class="row row-cols-md-3 row-cols-1">
+                <div class="col" style="color: white;">
+                    <p>
+                        Jl Jeruk Kembar Blok Q9 No. 15
+                        Srengseng, Kembangan 
+                        DKI Jakarta
+                    </p>
+                </div>
+                <div class="col">
+
+                </div>
+                <div class="col" style="color: white;">
+                    <p>
+                        Copyright © 2024 · EduALL Junior
+                        All rights reserved.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js"></script>
+
+    <script>
+        AOS.init();
+        
+        $(function() {
+            $(window).scroll(function() {
+                var scrollTop = $(window).scrollTop();
+                
+                if (scrollTop > 200) {
+                    $("#scroll-animation").css("font-size", "x-large");
+                } else {
+                    $("#scroll-animation").css("font-size", "medium");
+                }
+            });
+        });
+
+        document.addEventListener("DOMContentLoaded", function () {
+            var splide = new Splide( '.splide', {
+                type   : 'loop',
+                perPage: 3,
+                gap : 20,
+                padding : {left: '1rem', right: '2rem'}
+            } );
+            splide.mount();
+        });
+
+    </script>
+
+</body>
+</html>
